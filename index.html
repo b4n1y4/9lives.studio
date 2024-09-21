@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Eyes with SVG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .eye-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        svg {
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .caution-tape {
+            position: fixed;
+            max-width: 100%;
+            bottom: 0;
+            right: -600px;
+            rotate: -30deg;
+            scale: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./under construction.png" alt="under construction" class="caution-tape">
+    <div class="eye-container">
+        <svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 79.82">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: #06f9ec;
+                    }
+
+                    .cls-2 {
+                        fill: #01d5c6;
+                        stroke: #00efd8;
+                        stroke-miterlimit: 10;
+                        stroke-width: .25px;
+                    }
+                </style>
+            </defs>
+            <path class="cls-2"
+                d="m14.73,24.18c-.21-.56.13-1.16.71-1.28,14.97-2.94,54.33-8.39,82.13,15.11,2.78,2.35,5.56,5.09,8.23,8.28.14.17.23.39.23.61,0,.36-.07.92-.49,1.39-.3.34-.71.55-1.16.62-1.17.19-2.26.73-3.27,1.35-20.23,12.4-44.45,13.58-62.86,2.65-14.69-8.72-21.11-22.44-23.52-28.73Z" />
+            <path class="cls-1"
+                d="m22.45,28.37c.06-1.88,1.39-3.47,3.23-3.85,14.45-3.04,26.23-2.11,33.48-.99,10.65,1.66,26.56,4.13,36,16.79,1.1,1.47,1.96,2.88,2.63,4.11.73,1.35.62,2.98-.24,4.25-.14.2-.28.4-.42.6-9.14,12.4-30.02,10.79-36.08,10.13-5.97-.6-15.46-2.55-23.52-9.19-2.11-1.74-3.68-3.5-6.83-7.02-7.2-8.05-8.11-11.34-8.23-13.79-.02-.36-.02-.7-.01-1.03Z" />
+            <path class="left-eye" id="leye"
+                d="m60.09,13.97c3.08-.12,6.46-.1,10.09.15,2.49.17,4.84.43,7.05.74.58,5.65.76,13.17-.88,21.06-.23,1.09-1.35,6.22-5.11,11.07-2.19,2.82-3.3,3.01-3.92,2.95-.57-.05-2.27-.46-4.47-7.04-1.91-5.72-2.33-10.48-2.51-12.98-.29-4.02-.51-9.46-.26-15.96Z" />
+            <path class="cls-2"
+                d="m158.93,48.94c-.51-.39-.6-1.12-.19-1.62.89-1.07,2.07-2.44,3.52-3.95,16.49-17.26,37.04-22.32,45.42-24.39,7.49-1.84,12.89-2.28,16.11-2.42,5.03-.22,9.33.09,12.55.48.52.06.94.48.99,1,.27,2.86.19,6.04-.52,9.41-3.59,16.93-20.46,25.03-23.4,26.38-4.45,2.17-17.92,8.02-34.55,4.34-9.16-2.03-15.88-6.19-19.93-9.24Z" />
+            <path class="cls-1"
+                d="m166.64,48.91c-.45-1.79.04-3.7,1.22-5.12,3.7-4.43,7.32-7.29,9.97-9.1,4.52-3.09,9.68-4.95,20-8.68,5.98-2.16,9.21-3.32,13.99-4.34,5.18-1.1,9.66-1.51,12.98-1.66.46-.02.91-.11,1.35-.22,3.62-.9,7.1.32,8.61,2.81,1.15,1.89.84,3.97.68,4.77-.33,1.95-1,4.81-2.47,8-8.01,17.41-29.51,21.8-33.19,22.55-4.61.94-12.2,1.87-21.7.09-.75-.17-9.72-2.36-11.44-9.08,0,0,0-.02,0-.03Z" />
+            <path class="right-eye" id="reye"
+                d="m185.52,16.41c1.84-.91,3.85-1.81,6.02-2.68,2.45-.98,4.79-1.78,6.98-2.45.84,4.07,1.48,9.35.93,14.99-.32,3.3-1.02,6.38-1.23,7.32-.36,1.59-.84,3.62-1.79,6.21-.8,2.17-1.64,3.94-2.43,5.4-1.74,3.21-2.63,4.8-3.45,4.85-2.34.14-5.06-7.87-6.09-14.26-.66-4.12-1.13-10.83,1.05-19.39Z" />
+        </svg>
+    </div>
+    <script>
+        document.addEventListener('mousemove', function (event) {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            const leftEye = document.getElementById('leye');
+            const rightEye = document.getElementById('reye');
+
+            const leftEyeBox = leftEye.getBoundingClientRect();
+            const rightEyeBox = rightEye.getBoundingClientRect();
+
+            const leftEyeCenterX = leftEyeBox.left + leftEyeBox.width / 2;
+            const leftEyeCenterY = leftEyeBox.top + leftEyeBox.height / 2;
+
+            const rightEyeCenterX = rightEyeBox.left + rightEyeBox.width / 2;
+            const rightEyeCenterY = rightEyeBox.top + rightEyeBox.height / 2;
+
+            const angleLeftEye = Math.atan2(mouseY - leftEyeCenterY, mouseX - leftEyeCenterX);
+            const angleRightEye = Math.atan2(mouseY - rightEyeCenterY, mouseX - rightEyeCenterX);
+
+            const maxTranslation = 10; // Max pixels the eyes can move
+
+            const leftEyeTranslateX = Math.cos(angleLeftEye) * maxTranslation;
+            let leftEyeTranslateY = Math.sin(angleLeftEye) * maxTranslation;
+
+            const rightEyeTranslateX = Math.cos(angleRightEye) * maxTranslation;
+            let rightEyeTranslateY = Math.sin(angleRightEye) * maxTranslation;
+
+            if (leftEyeTranslateY > 0) leftEyeTranslateY *= 0.25;
+            if (rightEyeTranslateY > 0) rightEyeTranslateY *= 0.25;
+
+            setTimeout(() => {
+                leftEye.setAttribute('transform', `translate(${leftEyeTranslateX}, ${leftEyeTranslateY})`);
+                rightEye.setAttribute('transform', `translate(${rightEyeTranslateX}, ${rightEyeTranslateY})`);
+            }, 150)
+        });
+    </script>
+
+
+</body>
+
+</html>
